@@ -30,10 +30,15 @@ interfaceType | string | 接口类型，1：普通新闻；2：本地新闻；3�
 sign | string | 签名：用于校验 | 是
 
 （1）lastTimestamp
+
 普通咨询和本地接口：
+
 根据此值查询到[lastTimestamp ~ (lastTimestamp+1)天]时间段内的文章信息。
+
 例如：lastTimestamp='2016-07-04 19:35:39'，则查询条件的时间区间即为：[2016-07-04 19:35:39, 2016-07-05 19:35:39]
-图集接口
+
+图集接口：
+
 则查询最近15分钟的图片，与lastTimestamp参数值无关。
 
 （2）请求测试：http://{ip}/netease/news/list.html
