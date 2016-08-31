@@ -19,6 +19,7 @@ lastTimeStamp=1466740231&interfaceType=1：原始消息
 4. 请求的URL：http://{ip}/netease/news/list.html
 请求方式：POST请求
 请求参数如下：
+
 参数名称| 参数类型 | 参数说明 | 是否必传
 ---|--- | --- | ---|
 appKey | string | 合作方唯一key，即对应“合作方接入”功能中的合作方ID | 是
@@ -34,6 +35,7 @@ sign | string | 签名：用于校验 | 是
 则查询最近15分钟的图片，与lastTimestamp参数值无关。
 
 （2）请求测试：http://{ip}/netease/news/list.html
+
 参数名称| 参数值
 ---| ---|
 appKey	| B6D767D2F8ED5D21A44B0E5886680CB9
