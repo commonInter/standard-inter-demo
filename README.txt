@@ -1,11 +1,14 @@
-¹ØÓÚÅäÖÃÎÄ¼şconfig/params.properties
-
-	ÅäÖÃÎÄ¼şÖĞÓĞappKey¡¢lastTimestamp¡¢interfaceType¡¢sign¡¢appSecretµÈ5¸ö¹Ø¼ü´Ê
-	ÆäÖĞappKey¡¢lastTimestamp¡¢interfaceTypeÎª±ØÌîÏî
+com.inter.testã€‚TestMainæ˜¯ä½¿ç”¨params.propertiesé…ç½®æ–‡ä»¶çš„æ§åˆ¶å°ç¨‹åº
+å…³äºé…ç½®æ–‡ä»¶config/params.properties
+	é…ç½®æ–‡ä»¶ä¸­æœ‰appKeyã€lastTimestampã€interfaceTypeã€signã€appSecretç­‰5ä¸ªå…³é”®è¯
+	å…¶ä¸­appKeyã€lastTimestampã€interfaceTypeä¸ºå¿…å¡«é¡¹
 	
-	signºÍappSecretÔòÎª¶şÑ¡Ò»µÄÑ¡ÌîÏî£»
-		ÈôÍ¬Ê±ÌîĞ´£¬ÔòÊ×ÏÈÊ¹ÓÃappSecret¸ù¾İMACËã·¨ÖØĞÂÉú³ÉsignÕªÒªĞÅÏ¢£¬È»ºóÁ¬½Ó·şÎñÆ÷ÇëÇóÊı¾İ£»
-		Èô·µ»ØµÄÊı¾İ²»ÕıÈ·£¬Ôò¸ù¾İÅäÖÃÎÄ¼şÖĞµÄsign¹Ø¼ü×Ö£¬ÔÙ´ÎÁ¬½Ó·şÎñÆ÷¡£
+	signå’ŒappSecretåˆ™ä¸ºäºŒé€‰ä¸€çš„é€‰å¡«é¡¹ï¼›
+		è‹¥åŒæ—¶å¡«å†™ï¼Œåˆ™é¦–å…ˆä½¿ç”¨appSecretæ ¹æ®MACç®—æ³•é‡æ–°ç”Ÿæˆsignæ‘˜è¦ä¿¡æ¯ï¼Œç„¶åè¿æ¥æœåŠ¡å™¨è¯·æ±‚æ•°æ®ï¼›
+		è‹¥è¿”å›çš„æ•°æ®ä¸æ­£ç¡®ï¼Œåˆ™æ ¹æ®é…ç½®æ–‡ä»¶ä¸­çš„signå…³é”®å­—ï¼Œå†æ¬¡è¿æ¥æœåŠ¡å™¨ã€‚
+
+
+com.inter.uiã€‚UITestMainä¸ºç•Œé¢ç‰ˆæœ¬ã€‚åªæ”¯æŒappKeyã€lastTimestampã€interfaceTypeã€sign4ä¸ªå‚æ•°
 
 
 
