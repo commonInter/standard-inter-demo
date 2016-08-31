@@ -3,7 +3,7 @@
 
 ### 1.接入流程
 
-首先必须向相关的技术人员申请appKey和密钥，以便得到接口的访问权限。申请完后，会得到相关数据信息，如appKey、interfaceType、的值等，之后可以请求http://{ip}/netease/news/list.html地址获取相关数据。
+首先必须向相关的技术人员申请appKey和密钥，以便得到接口的访问权限。申请完后，会得到相关数据信息，如appKey、interfaceType、密钥等等，之后可以请求http://{ip}/netease/news/list.html地址获取相关数据。
 
 ### 2.对外接口文档
 ####1. MAC算法
