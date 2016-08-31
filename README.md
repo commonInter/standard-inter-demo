@@ -13,7 +13,7 @@ lastTimeStamp=1466740231&interfaceType=1：原始消息
 3. 验签
 利用MAC算法，对传递过来的参数中，由第三方传入的appKey得到唯一对应的appSecret，以appSecret作为密钥，对原始消息（即lastTimeStamp=1466740231&interfaceType=1），做摘要处理得到字符串A，比较字符串A和sign进行比较，若A和sign字符串相等，则视为验签通过。
 
-4. 请求的URL：http://106.38.231.89/netease/news/list.html
+4. 请求的URL：http://{ip}/netease/news/list.html
 请求方式：POST请求
 请求参数：
 
@@ -30,7 +30,7 @@ lastTimeStamp=1466740231&interfaceType=1：原始消息
 图集接口
 则查询最近15分钟的图片，与lastTimestamp参数值无关。
 
-（2）请求测试：http://106.38.231.89/netease/news/list.html
+（2）请求测试：http://{ip}/netease/news/list.html
 参数名	参数值
  appKey	 B6D767D2F8ED5D21A44B0E5886680CB9
  lastTimestamp	 1369358251
