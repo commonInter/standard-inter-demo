@@ -5,7 +5,7 @@
 
 
 
-一、对外接口文档
+二、对外接口文档
 
 1. MAC算法
 消息认证码算法，兼容了MD和SHA算法优势，并在此基础上增加了密钥支持，是一种相对更加安全的消息摘要算法。
@@ -35,11 +35,12 @@ lastTimeStamp=1466740231&interfaceType=1：原始消息
 则查询最近15分钟的图片，与lastTimestamp参数值无关。
 
 （2）请求测试：http://{ip}/netease/news/list.html
-参数名	参数值
- appKey	 B6D767D2F8ED5D21A44B0E5886680CB9
- lastTimestamp	 1369358251
- interfaceType	 1
- sign	 hby+MyuL1E7lKjSyO0m7BZ3JEQc=
+ 参数名|	参数值
+ ---|---|
+ appKey	| B6D767D2F8ED5D21A44B0E5886680CB9
+ lastTimestamp	| 1369358251
+ interfaceType	| 1
+ sign	| hby+MyuL1E7lKjSyO0m7BZ3JEQc=
 
 测试返回数据如下：
 ```json
