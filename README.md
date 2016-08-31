@@ -7,7 +7,7 @@
 首先必须向相关的技术人员申请appKey和密钥，以便得到接口的访问权限。申请完后，会得到相关数据信息，如appKey、interfaceType、密钥等等，之后可以请求http://{ip}/netease/news/list.html地址获取相关数据。
 
 #### 2. 验证方式
-对外标准化接口使用MAC算法进行验证，根据合作方提供的appKey、interfaceType、sign、lasttimestamp进行身份校验。具体算法内容，可参考demo实例
+对外标准化接口使用MAC算法进行验证，根据合作方提供的appKey、interfaceType、sign、lasttimestamp进行身份校验。算法具体内容，可参考demo实例
 
 ### 2. 实例说明
 
