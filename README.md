@@ -39,7 +39,8 @@ sign | string | 签名：用于校验 | 是
 （2）sign
 
 sign值由MAC算法计算得到的摘要值，计算方式如下：
-   由第三方传入的appKey参数得到唯一对应的appSecret，以appSecret作为密钥，对原始消息（即lastTimeStamp=1466740231&interfaceType=1），做摘要处理得到。
+
+   由合作方传入的appKey参数得到其唯一对应的appSecret，以appSecret作为密钥，对原始消息（即lastTimeStamp=1466740231&interfaceType=1），做摘要处理得到。
 
 
 （3）请求测试：http://{ip}/netease/news/list.html
