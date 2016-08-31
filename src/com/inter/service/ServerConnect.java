@@ -26,14 +26,14 @@ public class ServerConnect {
 	 * @return
 	 */
 	public String getPostRequestResult(String url) {
-		String result = HttpClientUtil.postData(url, getRequestParams(Constants.filename, true));
+		String result = HttpClientUtil.postData(url, getRequestParams(Constants.filename, true, Constants.TimeType.TIMESTAMP_TEN.getValue()));
 		
 		if(StringUtils.isNotBlank(result)) {
 			try {
 				JSONObject jsonObj = JSON.parseObject(result);
 				String code = jsonObj.getString("code");
 				if(StringUtils.isBlank(code) || (StringUtils.isNotBlank(code) && !code.equals("200"))) {
-					result = HttpClientUtil.postData(url, getRequestParams(Constants.filename, false));
+					result = HttpClientUtil.postData(url, getRequestParams(Constants.filename, false, Constants.TimeType.TIMESTAMP_TEN.getValue()));
 				}
 			} catch (Exception e) {
 				return "";
@@ -48,7 +48,7 @@ public class ServerConnect {
 	 * @param filename
 	 * @return
 	 */
-	public Map<String, String> getRequestParams(String filename, boolean whetherSecret) {
+	public Map<String, String> getRequestParams(String filename, boolean whetherSecret, int timeType) {
 		Map<String, String> params = new HashMap<String, String>();
 		
 		Properties prop = new Properties();
@@ -63,8 +63,12 @@ public class ServerConnect {
 			String timestamp = "";
 			String lasttime = prop.getProperty("lastTime");
 			if(StringUtils.isNotBlank(lasttime)) {
-				timestamp = String.valueOf(DateUtil.parse(lasttime).getTime()/1000);
-				params.put("lastTimestamp", timestamp);
+				if(timeType == Constants.TimeType.TIMESTAMP_TEN.getValue()) {
+					timestamp = String.valueOf(DateUtil.parse(lasttime).getTime()/1000);
+					params.put("lastTimestamp", timestamp);
+				} else {
+					params.put("lastTimestamp", lasttime);
+				}
 			}
 			String type = prop.getProperty("interfaceType");
 			params.put("interfaceType", type);

@@ -30,6 +30,8 @@ public class UITestMain implements ActionListener{
 	private JTextField signText;
 	private JTextArea area;
 	
+	private ServerConnect sconnect = new ServerConnect();
+	
 	private void createAndShowGUI() {    
         JFrame f = new JFrame("测试数据");
         f.getContentPane().setLayout(new BorderLayout());
@@ -41,11 +43,12 @@ public class UITestMain implements ActionListener{
         JPanel centerJP = new JPanel();
         initCenter(centerJP, f);
         
+        initProp();
+        
         f.add(norJP, BorderLayout.NORTH);
         f.add(centerJP, BorderLayout.CENTER);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.validate();
-//        f.setExtendedState(Frame.MAXIMIZED_BOTH);
         f.pack();
         f.setVisible(true);
     }
@@ -87,13 +90,17 @@ public class UITestMain implements ActionListener{
         interTypeJP.add(interTypeText);
         norJP.add(interTypeJP);
         
-        appkeyText.setText("B6D767D2F8ED5D21A44B0E5886680CB9");
-        signText.setText("gu1mGnzVHKiPcdogbUCUEM3LMyk=");
-        lastTimeText.setText("2015-09-14 00:00:00");
-        
         JButton connServerJB = new JButton("连接服务器");
         connServerJB.addActionListener(this);
         norJP.add(connServerJB);
+	}
+	
+	public void initProp() {
+		Map<String, String> params = sconnect.getRequestParams(Constants.filename, false, Constants.TimeType.TIME.getValue());
+		appkeyText.setText(params.get("appKey"));
+        signText.setText(params.get("sign"));
+        lastTimeText.setText(params.get("lastTimestamp"));
+        interTypeText.setText(params.get("interfaceType"));
 	}
     
     public static void main(String args[]) {
@@ -121,7 +128,6 @@ public class UITestMain implements ActionListener{
 				params.put("lastTimestamp", String.valueOf(DateUtil.parse(lastTime).getTime()/1000));
 				params.put("interfaceType", interType);
 				params.put("sign", sign);
-				ServerConnect sconnect = new ServerConnect();
 				String result = sconnect.getPostRequestResult(Constants.url, params);
 				area.setText(result);
 			} catch (Exception e) {
