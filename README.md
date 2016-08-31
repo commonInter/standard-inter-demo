@@ -18,13 +18,13 @@ lastTimeStamp=1466740231&interfaceType=1：原始消息
 
 4. 请求的URL：http://{ip}/netease/news/list.html
 请求方式：POST请求
-请求参数：
-
- 参数名	参数类型	说明
- appKey	 String	 合作方唯一key，即对应“合作方接入”功能中的合作方ID
- lastTimestamp	 String	 上一次更新的linux时间戳，参数传长度为10
- interfaceType	 String	 接口类型，1：普通新闻；2：本地新闻；3：图集图片
- sign	 String	 签名：用于校验
+请求参数如下：
+参数名称| 参数类型 | 参数说明 | 是否必传
+---|--- | --- | ---|
+appKey | string | 合作方唯一key，即对应“合作方接入”功能中的合作方ID | 是
+lastTimestamp | string | 上一次更新的linux时间戳，参数传长度为10 | 是
+interfaceType | string | 接口类型，1：普通新闻；2：本地新闻；3：图集图片 | 是
+sign | string | 签名：用于校验 | 是
 
 （1）lastTimestamp
 普通咨询和本地接口：
@@ -41,12 +41,6 @@ lastTimestamp	| 1369358251
 interfaceType	| 1
 sign	| hby+MyuL1E7lKjSyO0m7BZ3JEQc=
 
- 参数名|	参数值
- ---|---|
- appKey	| B6D767D2F8ED5D21A44B0E5886680CB9
- lastTimestamp	| 1369358251
- interfaceType	| 1
- sign	| hby+MyuL1E7lKjSyO0m7BZ3JEQc=
 
 测试返回数据如下：
 ```json
