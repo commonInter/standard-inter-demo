@@ -7,16 +7,16 @@
 首先必须向相关的技术人员申请appKey和密钥，以便得到接口的访问权限。申请完后，会得到相关数据信息，如appKey、interfaceType、密钥等等，之后可以请求http://{ip}/netease/news/list.html地址获取相关数据。
 
 #### 2. 验证方式
-对外标准化接口使用MAC算法进行验证，根据合作方提供的appKey、interfaceType、sign、lasttimestamp进行身份校验。
-sign为MAC算法计算的摘要结果
-appSecret：合作方密钥值
-lastTimeStamp=1466740231&interfaceType=1：原始消息
+对外标准化接口使用MAC算法进行验证，根据合作方提供的appKey、interfaceType、sign、lasttimestamp进行身份校验。具体算法内容，可参考demo实例
 
 ### 2. 实例说明
+
 请求的URL：http://{ip}/netease/news/list.html
+
 请求方式：POST请求
 
 请求参数如下：
+
 参数名称| 参数类型 | 参数说明 | 是否必传
 ---|--- | --- | ---|
 appKey | string | 合作方唯一key，即对应“合作方接入”功能中的合作方ID | 是
@@ -37,7 +37,8 @@ sign | string | 签名：用于校验 | 是
 则查询最近15分钟的图片，与lastTimestamp参数值无关。
 
 （2）sign
-此值为MAC算法得到的摘要值，其中由第三方传入的appKey参数得到唯一对应的appSecret，以appSecret作为密钥，对原始消息（即lastTimeStamp=1466740231&interfaceType=1），做摘要处理得到
+此值为MAC算法得到的摘要值，其中由第三方传入的appKey参数得到唯一对应的appSecret，以appSecret作为密钥，对原始消息（即lastTimeStamp=1466740231&interfaceType=1），做摘要处理得到。
+
 
 （3）请求测试：http://{ip}/netease/news/list.html
 
