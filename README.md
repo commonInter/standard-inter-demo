@@ -16,7 +16,8 @@ lastTimeStamp=1466740231&interfaceType=1：原始消息
 4. 请求的URL：http://106.38.231.89/netease/news/list.html
 请求方式：POST请求
 请求参数：
-参数名	参数类型	说明
+
+ 参数名	参数类型	说明
  appKey	 String	 合作方唯一key，即对应“合作方接入”功能中的合作方ID
  lastTimestamp	 String	 上一次更新的linux时间戳，参数传长度为10
  interfaceType	 String	 接口类型，1：普通新闻；2：本地新闻；3：图集图片
