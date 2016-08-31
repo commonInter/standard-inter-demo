@@ -11,6 +11,7 @@
 
 ####2. 加密字段
 appSecret：合作方密钥值
+
 lastTimeStamp=1466740231&interfaceType=1：原始消息
 
 ####3. 验签
