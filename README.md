@@ -37,6 +37,7 @@ sign | string | 签名：用于校验 | 是
 则查询最近15分钟的图片，与lastTimestamp参数值无关。
 
 （2）sign
+
 此值为MAC算法得到的摘要值，其中由第三方传入的appKey参数得到唯一对应的appSecret，以appSecret作为密钥，对原始消息（即lastTimeStamp=1466740231&interfaceType=1），做摘要处理得到。
 
 
