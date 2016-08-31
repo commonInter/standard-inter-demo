@@ -1,6 +1,10 @@
 # standard-inter-demo
 对外接口demo
 
+一、接入流程
+
+
+
 一、对外接口文档
 
 1. MAC算法
@@ -38,6 +42,7 @@ lastTimeStamp=1466740231&interfaceType=1：原始消息
  sign	 hby+MyuL1E7lKjSyO0m7BZ3JEQc=
 
 测试返回数据如下：
+```json
 {
   "message": "处理完成",
   "data": {
@@ -89,6 +94,6 @@ lastTimeStamp=1466740231&interfaceType=1：原始消息
   },
   "code": 200
 }
-
+```
 
 
