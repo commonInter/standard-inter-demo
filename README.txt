@@ -9,7 +9,8 @@ com.inter.test。TestMain是使用params.properties配置文件的控制台程�
 
 
 com.inter.ui。UITestMain为界面版本。只支持appKey、lastTime、interfaceType、sign4个参数
-	其中为方便测试，appKey、lastTime、interfaceType、sign的值将会首先从config/params.properties读取到输入框中
+	其中为方便测试，appKey、lastTime、interfaceType、sign的值将会首先从config/params.properties读取到输入框中。
+	若此文件中不存在对应值，用户则需要手动输入
 
 【注意】lastTime为yyyy-MM-dd HH:mm:ss格式的日期
 
