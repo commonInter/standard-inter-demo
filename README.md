@@ -3,21 +3,23 @@
 
 ### 1.接入流程
 
-
+首先必须向相关的技术人员申请appKey和密钥，得到密钥和appKey的值后，可以请求http://{ip}/netease/news/list.html地址获取相关数据。
 
 ### 2.对外接口文档
-1. MAC算法
+####1. MAC算法
 消息认证码算法，兼容了MD和SHA算法优势，并在此基础上增加了密钥支持，是一种相对更加安全的消息摘要算法。
 
-2. 加密字段
+####2. 加密字段
 appSecret：合作方密钥值
 lastTimeStamp=1466740231&interfaceType=1：原始消息
 
-3. 验签
+####3. 验签
 利用MAC算法，对传递过来的参数中，由第三方传入的appKey得到唯一对应的appSecret，以appSecret作为密钥，对原始消息（即lastTimeStamp=1466740231&interfaceType=1），做摘要处理得到字符串A，比较字符串A和sign进行比较，若A和sign字符串相等，则视为验签通过。
 
-4. 请求的URL：http://{ip}/netease/news/list.html
+####4. 请求的URL：http://{ip}/netease/news/list.html
+
 请求方式：POST请求
+
 请求参数如下：
 
 参数名称| 参数类型 | 参数说明 | 是否必传
